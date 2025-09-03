@@ -9,29 +9,48 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="topbar">
-    <div class="container row">
-      <a href="#" class="brand">
-        <span class="dot"></span>
-        <h1>HA$H <span style="opacity:.7">Skins</span></h1>
-      </a>
-      <nav class="nav">
-        <button class="chip active" data-filter="all">Todos</button>
-        <button class="chip" data-filter="csgo">CS2</button>
-        <button class="chip" data-filter="valorant">Valorant</button>
-        <button class="chip" data-filter="lol">LOL</button>
-        <button class="chip" data-filter="lol">...</button>
-      </nav>
-      <div class="search">
-        <input id="search" type="search" placeholder="Buscar skins..." />
-      </div>
-      <button id="openCart" class="cart-btn">
-        <span>Carrinho</span>
-        <span id="cartCount" class="badge">0</span>
-      </button>
+<!-- Header -->
+<header class="topbar">
+  <div class="container row">
+    <a href="#" class="brand">
+      <span class="dot"></span>
+      <h1>HA$H <span style="opacity:.7">Skins</span></h1>
+    </a>
+    <nav class="nav">
+      <button class="chip active" data-filter="all">Todos</button>
+      <button class="chip" data-filter="csgo">CS2</button>
+      <button class="chip" data-filter="valorant">Valorant</button>
+      <button class="chip" data-filter="lol">LOL</button>
+      <button class="chip" data-filter="outros">...</button>
+    </nav>
+    <div class="search">
+      <input id="search" type="search" placeholder="Buscar skins..." />
     </div>
+
+    <!-- NOVO BOTÃO DE DETALHES -->
+    <button id="openSpecs" class="specs-btn">
+      <span>Detalhes</span>
+    </button>
+
+    <button id="openCart" class="cart-btn">
+      <span>Carrinho</span>
+      <span id="cartCount" class="badge">0</span>
+    </button>
+    <!-- Drawer de Especificações -->
+<aside id="specsDrawer" class="drawer">
+  <header class="row">
+    <strong>Detalhes da Skin</strong>
+    <button id="closeSpecs" class="btn ghost">Fechar</button>
   </header>
+  <div class="items">
+    <div id="specsContent">
+      <p>Selecione uma skin para ver os detalhes.</p>
+    </div>
+  </div>
+</aside>
+
+  </div>
+</header>
 
   <!-- Hero -->
   <section class="hero">
