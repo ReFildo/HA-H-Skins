@@ -106,36 +106,38 @@ function scrollCarousel(direction) {
   });
 }
 
-// Drawer de Especificações
+// Drawer de Especificações (mantido caso queira usar no futuro)
 const specsDrawer = document.getElementById("specsDrawer");
 const closeSpecs = document.getElementById("closeSpecs");
 const specsContent = document.getElementById("specsContent");
 
-closeSpecs.addEventListener("click", () => {
-  specsDrawer.classList.remove("open");
-});
+if (closeSpecs) {
+  closeSpecs.addEventListener("click", () => {
+    specsDrawer.classList.remove("open");
+  });
+}
 
-// Atualiza eventos de detalhes em cada card
+// Atualiza eventos de detalhes em cada card (abre nova aba)
 function updateDetailsButtons() {
   document.querySelectorAll(".js-details").forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       const card = btn.closest(".card");
-
       const title = card.querySelector(".title").textContent;
-      const rarity = card.querySelector(".rarity").textContent;
-      const price = card.querySelector(".price").textContent;
-      const imgSrc = card.querySelector("img").src;
 
-      specsContent.innerHTML = `
-        <img src="${imgSrc}" alt="${title}" style="width:100%;border-radius:var(--radius);margin-bottom:1rem;">
-        <h3>${title}</h3>
-        <p><strong>Raridade:</strong> ${rarity}</p>
-        <p><strong>Preço:</strong> ${price}</p>
-        <p>⚙️ Especificações extras da skin podem ser adicionadas aqui.</p>
-      `;
+      // URLs individuais de exemplo
+      let url = "#";
+      if (title.includes("Karambit")) url = "https://csgoskins.gg/items/karambit-forest-ddpat";
+      if (title.includes("Doppler")) url = "https://csgoskins.gg/items/canivete-doppler";
+      if (title.includes("Luvas de Motociclismo")) url = "https://csgoskins.gg/items/luvas-de-motociclismo";
+      if (title.includes("AK-47 Vulcan")) url = "https://csgoskins.gg/items/ak47-vulcan";
+      if (title.includes("AWP Asiimov")) url = "https://csgoskins.gg/items/awp-asiimov";
+      if (title.includes("Karambit Fade")) url = "https://csgoskins.gg/items/karambit-fade";
+      if (title.includes("M4A4 Howl")) url = "https://csgoskins.gg/items/m4a4-howl";
+      if (title.includes("Luvas Esportivas Vice")) url = "https://csgoskins.gg/items/luvas-vice";
 
-      specsDrawer.classList.add("open");
+      // Abre nova aba
+      window.open(url, "_blank");
     });
   });
 }
