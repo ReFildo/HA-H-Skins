@@ -321,3 +321,26 @@
 
 .carousel-btn.prev { left: 0; }
 .carousel-btn.next { right: 0; }
+
+document.querySelectorAll(".carousel").forEach(carousel => {
+  const track = carousel.querySelector(".carousel-track");
+  const prevBtn = carousel.querySelector(".prev");
+  const nextBtn = carousel.querySelector(".next");
+
+  let index = 0;
+
+  nextBtn.addEventListener("click", () => {
+    const cardWidth = track.querySelector(".card").offsetWidth + 16; // largura + gap
+    index++;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      const cardWidth = track.querySelector(".card").offsetWidth + 16;
+      track.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+  });
+});
+
