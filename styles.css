@@ -284,3 +284,40 @@
     color: var(--fg-2);
     font-size: .9rem;
   }
+.carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 2rem;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.carousel .card {
+  min-width: 220px; /* tamanho fixo de cada card */
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bg-2);
+  color: var(--fg);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: .3rem .6rem;
+  border-radius: var(--radius);
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: var(--primary);
+}
+
+.carousel-btn.prev { left: 0; }
+.carousel-btn.next { right: 0; }
