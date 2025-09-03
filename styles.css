@@ -200,6 +200,7 @@
   height: auto; /* ajusta proporcional */
   margin: 0 auto; /* centraliza */
   display: block;
+}
   .meta {
     display: flex;
     gap: .5rem;
