@@ -145,3 +145,16 @@ document.querySelectorAll(".card").forEach(card => {
     specsDrawer.classList.add("open");
   });
 });
+
+function scrollCarousel(direction) {
+  const carousel = document.getElementById("csCarousel");
+  const scrollAmount = 300; // pixels
+  carousel.scrollBy({
+    left: direction * scrollAmount,
+    behavior: "smooth",
+  });
+}
+
+
+
+
