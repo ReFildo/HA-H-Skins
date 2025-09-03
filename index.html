@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BleikStore • Skins</title>
+  <title>HA$H • Skins</title>
   <meta name="description" content="Loja de skins inspirada na BleikStore — facas, rifles, luvas e muito mais." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -18,10 +18,9 @@
       </a>
       <nav class="nav">
         <button class="chip active" data-filter="all">Todos</button>
-        <button class="chip" data-filter="facas">Facas</button>
-        <button class="chip" data-filter="luvas">Luvas</button>
-        <button class="chip" data-filter="rifles">Rifles</button>
-        <button class="chip" data-filter="snipers">Snipers</button>
+        <button class="chip" data-filter="csgo">CS:GO</button>
+        <button class="chip" data-filter="valorant">Valorant</button>
+        <button class="chip" data-filter="lol">LoL</button>
       </nav>
       <div class="search">
         <input id="search" type="search" placeholder="Buscar skins..." />
@@ -39,14 +38,50 @@
       <div class="hero-card">
         <div class="kicker">Oferta do dia</div>
         <h2>Skins raras com até 30% OFF</h2>
-        <p>Aproveite as promoções limitadas de facas, luvas e rifles!</p>
+        <p>Aproveite promoções limitadas de facas, luvas e rifles!</p>
         <div class="timer" id="countdown">10:00</div>
       </div>
     </div>
   </section>
 
-  <!-- Produtos -->
-  <section class="grid" id="grid"></section>
+  <!-- Jogos e Skins -->
+  <main class="container">
+    <!-- CS:GO -->
+    <section class="game-block" id="csgo">
+      <h2>🎯 CS:GO</h2>
+      <ul class="skin-list">
+        <li>Facas</li>
+        <li>Luvas</li>
+        <li>Rifles</li>
+        <li>Snipers</li>
+      </ul>
+      <div class="grid" id="grid-csgo"></div>
+    </section>
+
+    <!-- Valorant -->
+    <section class="game-block" id="valorant">
+      <h2>🔥 Valorant</h2>
+      <ul class="skin-list">
+        <li>Facas</li>
+        <li>Vandals</li>
+        <li>Phantoms</li>
+        <li>Clássicas</li>
+      </ul>
+      <div class="grid" id="grid-valorant"></div>
+    </section>
+
+    <!-- LoL -->
+    <section class="game-block" id="lol">
+      <h2>⚔️ League of Legends</h2>
+      <ul class="skin-list">
+        <li>Campeões populares</li>
+        <li>Skins Lendárias</li>
+        <li>Skins Épicas</li>
+        <li>Skins Prestígio</li>
+      </ul>
+      <div class="grid" id="grid-lol"></div>
+    </section>
+  </main>
 
   <!-- Template de produto -->
   <template id="tpl-card">
