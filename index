@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BleikStore • Skins</title>
+  <meta name="description" content="Loja de skins inspirada na BleikStore — facas, rifles, luvas e muito mais." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container row">
+      <a href="#" class="brand">
+        <span class="dot"></span>
+        <h1>HA$H <span style="opacity:.7">Skins</span></h1>
+      </a>
+      <nav class="nav">
+        <button class="chip active" data-filter="all">Todos</button>
+        <button class="chip" data-filter="facas">Facas</button>
+        <button class="chip" data-filter="luvas">Luvas</button>
+        <button class="chip" data-filter="rifles">Rifles</button>
+        <button class="chip" data-filter="snipers">Snipers</button>
+      </nav>
+      <div class="search">
+        <input id="search" type="search" placeholder="Buscar skins..." />
+      </div>
+      <button id="openCart" class="cart-btn">
+        <span>Carrinho</span>
+        <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-card">
+        <div class="kicker">Oferta do dia</div>
+        <h2>Skins raras com até 30% OFF</h2>
+        <p>Aproveite as promoções limitadas de facas, luvas e rifles!</p>
+        <div class="timer" id="countdown">10:00</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos -->
+  <section class="grid" id="grid"></section>
+
+  <!-- Template de produto -->
+  <template id="tpl-card">
+    <article class="card">
+      <div class="thumb"><img alt="" loading="lazy" /></div>
+      <h3 class="title js-title"></h3>
+      <div class="rarity js-rarity"></div>
+      <div class="condition js-condition"></div>
+      <div class="price js-price"></div>
+      <div class="row-actions">
+        <button class="btn sm primary js-add">Adicionar</button>
+      </div>
+    </article>
+  </template>
+
+  <!-- Carrinho -->
+  <aside id="cartDrawer" class="drawer">
+    <header class="row">
+      <strong>Seu carrinho</strong>
+      <button id="closeCart" class="btn ghost">Fechar</button>
+    </header>
+    <div class="items" id="cartItems"></div>
+    <footer>
+      <div class="total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+      <button class="btn primary" style="width:100%">Finalizar compra</button>
+    </footer>
+  </aside>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p>© 2025 BleikStore Clone — Somente skins</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
