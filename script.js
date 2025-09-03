@@ -137,7 +137,8 @@ function updateDetailsButtons() {
       if (title.includes("Luvas Esportivas Vice")) url = "https://csgoskins.gg/items/luvas-vice";
 
       // Abre nova aba
-      window.open(url, "_blank");
+   window.open("karambit.html", "_blank");
+
     });
   });
 }
