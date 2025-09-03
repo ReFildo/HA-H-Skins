@@ -344,3 +344,17 @@ document.querySelectorAll(".carousel").forEach(carousel => {
   });
 });
 
+.specs-btn {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--bg-3);
+  padding: .5rem .9rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.specs-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
