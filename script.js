@@ -112,3 +112,36 @@ const products = [
     document.getElementById('closeCart').addEventListener('click', () => drawer.classList.remove('open'));
   });
   
+// Drawer de Especificações
+const specsDrawer = document.getElementById("specsDrawer");
+const openSpecs = document.getElementById("openSpecs");
+const closeSpecs = document.getElementById("closeSpecs");
+const specsContent = document.getElementById("specsContent");
+
+openSpecs.addEventListener("click", () => {
+  specsDrawer.classList.add("open");
+});
+
+closeSpecs.addEventListener("click", () => {
+  specsDrawer.classList.remove("open");
+});
+
+// Exemplo: quando clicar em uma skin, mostrar os detalhes
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("click", () => {
+    const title = card.querySelector(".title").textContent;
+    const rarity = card.querySelector(".rarity").textContent;
+    const price = card.querySelector(".price").textContent;
+    const imgSrc = card.querySelector("img").src;
+
+    specsContent.innerHTML = `
+      <img src="${imgSrc}" alt="${title}" style="width:100%;border-radius:var(--radius);margin-bottom:1rem;">
+      <h3>${title}</h3>
+      <p><strong>Raridade:</strong> ${rarity}</p>
+      <p><strong>Preço:</strong> ${price}</p>
+      <p>Especificações técnicas da skin podem ser adicionadas aqui.</p>
+    `;
+
+    specsDrawer.classList.add("open");
+  });
+});
