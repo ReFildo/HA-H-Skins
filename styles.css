@@ -155,24 +155,6 @@ button, input, select { font: inherit; color: inherit; border: none; outline: no
   margin-top: auto;
   gap: .5rem;
 }
-/* Botão de detalhes em cada card */
-.js-details {
-  background: var(--bg-3); /* cor de fundo semelhante aos cards */
-  color: var(--fg);         /* cor do texto */
-  border-radius: var(--radius);
-  padding: .4rem .75rem;
-  cursor: pointer;
-  font-size: .85rem;
-  font-weight: 600;
-  transition: .2s;
-}
-
-.js-details:hover {
-  background: var(--primary); /* muda para cor principal ao passar o mouse */
-  color: #fff;
-}
-
-
 .row-actions .btn { flex: 1; }
 
 /* --- Carousel --- */
