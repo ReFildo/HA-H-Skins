@@ -194,13 +194,17 @@
     transition: transform .15s;
   }
   .card:hover { transform: translateY(-3px); }
-  .thumb { aspect-ratio: 16/9; overflow: hidden; }
- .thumb img {
-  width: 50%;   /* ocupa só 80% da largura */
-  height: auto; /* ajusta proporcional */
-  margin: 0 auto; /* centraliza */
-  display: block;
+.thumb {
+  height: 120px; /* define o espaço da imagem */
+  overflow: hidden;
 }
+.thumb img {
+  width: auto;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
   .meta {
     display: flex;
     gap: .5rem;
