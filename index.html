@@ -68,67 +68,72 @@
   <main class="container">
 
     <!-- CS:GO -->
-    <section class="game-block" id="csgo">
+   <section class="game-block" id="csgo">
   <h2>🎯 CS2</h2>
-  <div class="carousel">
-    <button class="carousel-btn prev">‹</button>
-    <div class="carousel-track">
-        <article class="card">
-          <div class="thumb"><img src="img-hash/Karambit.jpg" alt="Karambit" loading="lazy"></div>
-          <h3 class="title">Karambit-Forest DDPAT</h3>
-          <div class="rarity">Rara</div>
-          <div class="price">R$ 899,90</div>
-          <div class="row-actions">
-            <button class="btn sm primary js-add">Adicionar</button>
-          </div>
-        </article>
-           <article class="card">
-          <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
-          <h3 class="title">Faca Karambit</h3>
-          <div class="rarity">Rara</div>
-          <div class="price">R$ 899,90</div>
-          <div class="row-actions">
-            <button class="btn sm primary js-add">Adicionar</button>
-          </div>
-        </article>
-           <article class="card">
-          <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
-          <h3 class="title">Faca Karambit</h3>
-          <div class="rarity">Rara</div>
-          <div class="price">R$ 899,90</div>
-          <div class="row-actions">
-            <button class="btn sm primary js-add">Adicionar</button>
-          </div>
-        </article>
-        <article class="card">
-          <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
-          <h3 class="title">Faca Karambit</h3>
-          <div class="rarity">Rara</div>
-          <div class="price">R$ 899,90</div>
-          <div class="row-actions">
-            <button class="btn sm primary js-add">Adicionar</button>
-          </div>
-        </article>
-       <article class="card">
-          <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
-          <h3 class="title">Faca Karambit</h3>
-          <div class="rarity">Rara</div>
-          <div class="price">R$ 899,90</div>
-          <div class="row-actions">
-            <button class="btn sm primary js-add">Adicionar</button>
-          </div>
-        </article>
-        <article class="card">
-          <div class="thumb"><img src="img/csgo-luva.jpg" alt="Luvas CS:GO" loading="lazy"></div>
-          <h3 class="title">Luvas Esportivas</h3>
-          <div class="rarity">Épica</div>
-          <div class="price">R$ 499,90</div>
-          <div class="row-actions">
-            <button class="btn sm primary js-add">Adicionar</button>
-          </div>
-        <button class="carousel-btn next">›</button>
-      </div>
-    </section>
+  <div class="carousel-wrapper">
+    <button class="carousel-btn prev" onclick="scrollCarousel(-1)">‹</button>
+
+    <div class="carousel-track" id="csCarousel">
+      <!-- Cards -->
+      <article class="card">
+        <div class="thumb"><img src="img-hash/Karambit.jpg" alt="Karambit" loading="lazy"></div>
+        <h3 class="title">Karambit-Forest DDPAT</h3>
+        <div class="rarity">Rara</div>
+        <div class="price">R$ 899,90</div>
+        <div class="row-actions">
+          <button class="btn sm primary js-add">Adicionar</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
+        <h3 class="title">Faca Karambit</h3>
+        <div class="rarity">Rara</div>
+        <div class="price">R$ 899,90</div>
+        <div class="row-actions">
+          <button class="btn sm primary js-add">Adicionar</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
+        <h3 class="title">Faca Karambit</h3>
+        <div class="rarity">Rara</div>
+        <div class="price">R$ 899,90</div>
+        <div class="row-actions">
+          <button class="btn sm primary js-add">Adicionar</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
+        <h3 class="title">Faca Karambit</h3>
+        <div class="rarity">Rara</div>
+        <div class="price">R$ 899,90</div>
+        <div class="row-actions">
+          <button class="btn sm primary js-add">Adicionar</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
+        <h3 class="title">Faca Karambit</h3>
+        <div class="rarity">Rara</div>
+        <div class="price">R$ 899,90</div>
+        <div class="row-actions">
+          <button class="btn sm primary js-add">Adicionar</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="img/csgo-luva.jpg" alt="Luvas CS:GO" loading="lazy"></div>
+        <h3 class="title">Luvas Esportivas</h3>
+        <div class="rarity">Épica</div>
+        <div class="price">R$ 499,90</div>
+        <div class="row-actions">
+          <button class="btn sm primary js-add">Adicionar</button>
+        </div>
+      </article>
+    </div>
+
+    <button class="carousel-btn next" onclick="scrollCarousel(1)">›</button>
+  </div>
+</section>
 
     <!-- Valorant -->
     <section class="game-block" id="valorant">
