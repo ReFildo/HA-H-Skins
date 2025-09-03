@@ -171,6 +171,42 @@ button, input, select { font: inherit; color: inherit; border: none; outline: no
   background: var(--primary);
   color: #fff;
 }
+/* Botões nos cards */
+.row-actions .btn,
+.row-actions .js-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  padding: .45rem .9rem;
+  border-radius: var(--radius);
+  font-size: .85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s, color .2s, border .2s;
+  border: 1px solid transparent;
+}
+
+/* Botão Adicionar */
+.row-actions .btn.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.row-actions .btn.primary:hover {
+  background: var(--primary-dark);
+}
+
+/* Botão Detalhes */
+.row-actions .js-details {
+  background: var(--bg-3);
+  color: var(--fg);
+}
+
+.row-actions .js-details:hover {
+  background: var(--primary);
+  color: #fff;
+}
 
 /* --- Carousel --- */
 .carousel-wrapper {
