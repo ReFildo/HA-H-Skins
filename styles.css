@@ -196,7 +196,7 @@
   .card:hover { transform: translateY(-3px); }
   .thumb { aspect-ratio: 16/9; overflow: hidden; }
  .thumb img {
-  width: 65%;   /* ocupa só 80% da largura */
+  width: 50%;   /* ocupa só 80% da largura */
   height: auto; /* ajusta proporcional */
   margin: 0 auto; /* centraliza */
   display: block;
