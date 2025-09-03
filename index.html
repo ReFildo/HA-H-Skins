@@ -44,58 +44,85 @@
     </div>
   </section>
 
-  <!-- Jogos e Skins -->
+  <!-- Principal -->
   <main class="container">
+
     <!-- CS:GO -->
     <section class="game-block" id="csgo">
       <h2>🎯 CS:GO</h2>
-      <ul class="skin-list">
-        <li>Facas</li>
-        <li>Luvas</li>
-        <li>Rifles</li>
-        <li>Snipers</li>
-      </ul>
-      <div class="grid" id="grid-csgo"></div>
+      <div class="grid">
+        <!-- Exemplo de produto -->
+        <article class="card">
+          <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
+          <h3 class="title">Faca Karambit</h3>
+          <div class="rarity">Rara</div>
+          <div class="price">R$ 899,90</div>
+          <div class="row-actions">
+            <button class="btn sm primary js-add">Adicionar</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><img src="img/csgo-luva.jpg" alt="Luvas CS:GO" loading="lazy"></div>
+          <h3 class="title">Luvas Esportivas</h3>
+          <div class="rarity">Épica</div>
+          <div class="price">R$ 499,90</div>
+          <div class="row-actions">
+            <button class="btn sm primary js-add">Adicionar</button>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- Valorant -->
     <section class="game-block" id="valorant">
       <h2>🔥 Valorant</h2>
-      <ul class="skin-list">
-        <li>Facas</li>
-        <li>Vandals</li>
-        <li>Phantoms</li>
-        <li>Clássicas</li>
-      </ul>
-      <div class="grid" id="grid-valorant"></div>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb"><img src="img/valorant-vandal.jpg" alt="Vandal Valorant" loading="lazy"></div>
+          <h3 class="title">Vandal Prime</h3>
+          <div class="rarity">Lendária</div>
+          <div class="price">R$ 299,90</div>
+          <div class="row-actions">
+            <button class="btn sm primary js-add">Adicionar</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><img src="img/valorant-phantom.jpg" alt="Phantom Valorant" loading="lazy"></div>
+          <h3 class="title">Phantom Oni</h3>
+          <div class="rarity">Épica</div>
+          <div class="price">R$ 259,90</div>
+          <div class="row-actions">
+            <button class="btn sm primary js-add">Adicionar</button>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- LoL -->
+    <!-- League of Legends -->
     <section class="game-block" id="lol">
       <h2>⚔️ League of Legends</h2>
-      <ul class="skin-list">
-        <li>Campeões populares</li>
-        <li>Skins Lendárias</li>
-        <li>Skins Épicas</li>
-        <li>Skins Prestígio</li>
-      </ul>
-      <div class="grid" id="grid-lol"></div>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb"><img src="img/lol-yasuo.jpg" alt="Skin Yasuo" loading="lazy"></div>
+          <h3 class="title">Yasuo Projeto</h3>
+          <div class="rarity">Épica</div>
+          <div class="price">R$ 49,90</div>
+          <div class="row-actions">
+            <button class="btn sm primary js-add">Adicionar</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><img src="img/lol-lux.jpg" alt="Skin Lux" loading="lazy"></div>
+          <h3 class="title">Lux Elementalista</h3>
+          <div class="rarity">Lendária</div>
+          <div class="price">R$ 99,90</div>
+          <div class="row-actions">
+            <button class="btn sm primary js-add">Adicionar</button>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
-
-  <!-- Template de produto -->
-  <template id="tpl-card">
-    <article class="card">
-      <div class="thumb"><img alt="" loading="lazy" /></div>
-      <h3 class="title js-title"></h3>
-      <div class="rarity js-rarity"></div>
-      <div class="condition js-condition"></div>
-      <div class="price js-price"></div>
-      <div class="row-actions">
-        <button class="btn sm primary js-add">Adicionar</button>
-      </div>
-    </article>
-  </template>
 
   <!-- Carrinho -->
   <aside id="cartDrawer" class="drawer">
