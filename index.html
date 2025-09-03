@@ -9,48 +9,29 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Header -->
-<header class="topbar">
-  <div class="container row">
-    <a href="#" class="brand">
-      <span class="dot"></span>
-      <h1>HA$H <span style="opacity:.7">Skins</span></h1>
-    </a>
-    <nav class="nav">
-      <button class="chip active" data-filter="all">Todos</button>
-      <button class="chip" data-filter="csgo">CS2</button>
-      <button class="chip" data-filter="valorant">Valorant</button>
-      <button class="chip" data-filter="lol">LOL</button>
-      <button class="chip" data-filter="outros">...</button>
-    </nav>
-    <div class="search">
-      <input id="search" type="search" placeholder="Buscar skins..." />
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container row">
+      <a href="#" class="brand">
+        <span class="dot"></span>
+        <h1>HA$H <span style="opacity:.7">Skins</span></h1>
+      </a>
+      <nav class="nav">
+        <button class="chip active" data-filter="all">Todos</button>
+        <button class="chip" data-filter="csgo">CS2</button>
+        <button class="chip" data-filter="valorant">Valorant</button>
+        <button class="chip" data-filter="lol">LOL</button>
+        <button class="chip" data-filter="outros">...</button>
+      </nav>
+      <div class="search">
+        <input id="search" type="search" placeholder="Buscar skins..." />
+      </div>
+      <button id="openCart" class="cart-btn">
+        <span>Carrinho</span>
+        <span id="cartCount" class="badge">0</span>
+      </button>
     </div>
-
-    <!-- NOVO BOTÃO DE DETALHES -->
-    <button id="openSpecs" class="specs-btn">
-      <span>Detalhes</span>
-    </button>
-
-    <button id="openCart" class="cart-btn">
-      <span>Carrinho</span>
-      <span id="cartCount" class="badge">0</span>
-    </button>
-    <!-- Drawer de Especificações -->
-<aside id="specsDrawer" class="drawer">
-  <header class="row">
-    <strong>Detalhes da Skin</strong>
-    <button id="closeSpecs" class="btn ghost">Fechar</button>
   </header>
-  <div class="items">
-    <div id="specsContent">
-      <p>Selecione uma skin para ver os detalhes.</p>
-    </div>
-  </div>
-</aside>
-
-  </div>
-</header>
 
   <!-- Hero -->
   <section class="hero">
@@ -67,73 +48,47 @@
   <!-- Principal -->
   <main class="container">
 
-    <!-- CS:GO -->
-   <section class="game-block" id="csgo">
-  <h2>🎯 CS2</h2>
-  <div class="carousel-wrapper">
-    <button class="carousel-btn prev" onclick="scrollCarousel(-1)">‹</button>
-
-    <div class="carousel-track" id="csCarousel">
-      <!-- Cards -->
-      <article class="card">
-        <div class="thumb"><img src="img-hash/Karambit.jpg" alt="Karambit" loading="lazy"></div>
-        <h3 class="title">Karambit-Forest DDPAT</h3>
-        <div class="rarity">Rara</div>
-        <div class="price">R$ 899,90</div>
-        <div class="row-actions">
-          <button class="btn sm primary js-add">Adicionar</button>
+    <!-- CS:GO Carousel -->
+    <section class="game-block" id="csgo">
+      <h2>🎯 CS2</h2>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn prev" onclick="scrollCarousel('csCarousel', -1)">‹</button>
+        <div class="carousel-track" id="csCarousel">
+          <!-- Cards -->
+          <article class="card">
+            <div class="thumb"><img src="img-hash/Karambit.jpg" alt="Karambit" loading="lazy"></div>
+            <h3 class="title">Karambit-Forest DDPAT</h3>
+            <div class="rarity">Rara</div>
+            <div class="price">R$ 899,90</div>
+            <div class="row-actions">
+              <button class="btn sm primary js-add">Adicionar</button>
+              <button class="btn sm ghost js-details">Detalhes</button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
+            <h3 class="title">Faca Karambit</h3>
+            <div class="rarity">Rara</div>
+            <div class="price">R$ 899,90</div>
+            <div class="row-actions">
+              <button class="btn sm primary js-add">Adicionar</button>
+              <button class="btn sm ghost js-details">Detalhes</button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb"><img src="img/csgo-luva.jpg" alt="Luvas CS:GO" loading="lazy"></div>
+            <h3 class="title">Luvas Esportivas</h3>
+            <div class="rarity">Épica</div>
+            <div class="price">R$ 499,90</div>
+            <div class="row-actions">
+              <button class="btn sm primary js-add">Adicionar</button>
+              <button class="btn sm ghost js-details">Detalhes</button>
+            </div>
+          </article>
         </div>
-      </article>
-      <article class="card">
-        <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
-        <h3 class="title">Faca Karambit</h3>
-        <div class="rarity">Rara</div>
-        <div class="price">R$ 899,90</div>
-        <div class="row-actions">
-          <button class="btn sm primary js-add">Adicionar</button>
-        </div>
-      </article>
-      <article class="card">
-        <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
-        <h3 class="title">Faca Karambit</h3>
-        <div class="rarity">Rara</div>
-        <div class="price">R$ 899,90</div>
-        <div class="row-actions">
-          <button class="btn sm primary js-add">Adicionar</button>
-        </div>
-      </article>
-      <article class="card">
-        <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
-        <h3 class="title">Faca Karambit</h3>
-        <div class="rarity">Rara</div>
-        <div class="price">R$ 899,90</div>
-        <div class="row-actions">
-          <button class="btn sm primary js-add">Adicionar</button>
-        </div>
-      </article>
-      <article class="card">
-        <div class="thumb"><img src="img/csgo-faca.jpg" alt="Faca CS:GO" loading="lazy"></div>
-        <h3 class="title">Faca Karambit</h3>
-        <div class="rarity">Rara</div>
-        <div class="price">R$ 899,90</div>
-        <div class="row-actions">
-          <button class="btn sm primary js-add">Adicionar</button>
-        </div>
-      </article>
-      <article class="card">
-        <div class="thumb"><img src="img/csgo-luva.jpg" alt="Luvas CS:GO" loading="lazy"></div>
-        <h3 class="title">Luvas Esportivas</h3>
-        <div class="rarity">Épica</div>
-        <div class="price">R$ 499,90</div>
-        <div class="row-actions">
-          <button class="btn sm primary js-add">Adicionar</button>
-        </div>
-      </article>
-    </div>
-
-    <button class="carousel-btn next" onclick="scrollCarousel(1)">›</button>
-  </div>
-</section>
+        <button class="carousel-btn next" onclick="scrollCarousel('csCarousel', 1)">›</button>
+      </div>
+    </section>
 
     <!-- Valorant -->
     <section class="game-block" id="valorant">
@@ -146,6 +101,7 @@
           <div class="price">R$ 299,90</div>
           <div class="row-actions">
             <button class="btn sm primary js-add">Adicionar</button>
+            <button class="btn sm ghost js-details">Detalhes</button>
           </div>
         </article>
         <article class="card">
@@ -155,6 +111,7 @@
           <div class="price">R$ 259,90</div>
           <div class="row-actions">
             <button class="btn sm primary js-add">Adicionar</button>
+            <button class="btn sm ghost js-details">Detalhes</button>
           </div>
         </article>
       </div>
@@ -171,6 +128,7 @@
           <div class="price">R$ 49,90</div>
           <div class="row-actions">
             <button class="btn sm primary js-add">Adicionar</button>
+            <button class="btn sm ghost js-details">Detalhes</button>
           </div>
         </article>
         <article class="card">
@@ -180,6 +138,7 @@
           <div class="price">R$ 99,90</div>
           <div class="row-actions">
             <button class="btn sm primary js-add">Adicionar</button>
+            <button class="btn sm ghost js-details">Detalhes</button>
           </div>
         </article>
       </div>
@@ -199,6 +158,19 @@
     </footer>
   </aside>
 
+  <!-- Drawer de Especificações -->
+  <aside id="specsDrawer" class="drawer">
+    <header class="row">
+      <strong>Detalhes da Skin</strong>
+      <button id="closeSpecs" class="btn ghost">Fechar</button>
+    </header>
+    <div class="items">
+      <div id="specsContent">
+        <p>Selecione uma skin para ver os detalhes.</p>
+      </div>
+    </div>
+  </aside>
+
   <!-- Rodapé -->
   <footer>
     <div class="container">
@@ -206,6 +178,43 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Drawer de Especificações
+    const specsDrawer = document.getElementById("specsDrawer");
+    const closeSpecs = document.getElementById("closeSpecs");
+    const specsContent = document.getElementById("specsContent");
+
+    closeSpecs.addEventListener("click", () => {
+      specsDrawer.classList.remove("open");
+    });
+
+    // Botões de detalhes
+    document.querySelectorAll(".js-details").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const card = btn.closest(".card");
+        const title = card.querySelector(".title").textContent;
+        const rarity = card.querySelector(".rarity").textContent;
+        const price = card.querySelector(".price").textContent;
+        const imgSrc = card.querySelector("img").src;
+
+        specsContent.innerHTML = `
+          <img src="${imgSrc}" alt="${title}" style="width:100%;border-radius:12px;margin-bottom:1rem;">
+          <h3>${title}</h3>
+          <p><strong>Raridade:</strong> ${rarity}</p>
+          <p><strong>Preço:</strong> ${price}</p>
+          <p>⚙️ Especificações extras da skin podem ser adicionadas aqui.</p>
+        `;
+
+        specsDrawer.classList.add("open");
+      });
+    });
+
+    // Carousel CS2
+    function scrollCarousel(trackId, direction) {
+      const track = document.getElementById(trackId);
+      track.scrollBy({ left: direction * 300, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
